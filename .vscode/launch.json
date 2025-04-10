@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/erwanhuyberechts/Desktop/42/Milestone_0/Libft",
+      "program": "/Users/erwanhuyberechts/Desktop/42/Milestone_0/Libft/build/Debug/outDebug"
+    }
+  ]
+}
