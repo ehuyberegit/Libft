@@ -3,11 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erwanhuyberechts <erwanhuyberechts@stud    +#+  +:+       +#+        */
+/*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 14:00:15 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/10 14:07:56 by erwanhuyber      ###   ########.fr       */
+/*   Updated: 2025/04/10 14:14:28 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdlib.h>
