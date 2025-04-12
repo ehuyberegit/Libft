@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 15:00:43 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/12 10:38:17 by ehuybere         ###   ########.fr       */
+/*   Created: 2025/04/12 10:06:27 by ehuybere          #+#    #+#             */
+/*   Updated: 2025/04/12 10:29:28 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_isascii(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i])
+	if (c >= 0 && c <= 127)
 	{
-		i++;
+		return (1);
 	}
-	return (i);
+	else
+	{
+		return (0);
+	}
 }

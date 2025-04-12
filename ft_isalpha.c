@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erwanhuyberechts <erwanhuyberechts@stud    +#+  +:+       +#+        */
+/*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 14:00:15 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/11 18:46:20 by erwanhuyber      ###   ########.fr       */
+/*   Updated: 2025/04/12 10:02:49 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

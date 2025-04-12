@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: erwanhuyberechts <erwanhuyberechts@stud    +#+  +:+       +#+        */
+/*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 18:57:57 by erwanhuyber       #+#    #+#             */
-/*   Updated: 2025/04/11 19:01:08 by erwanhuyber      ###   ########.fr       */
+/*   Updated: 2025/04/12 10:02:45 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

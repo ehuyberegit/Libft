@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 15:00:43 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/12 10:38:17 by ehuybere         ###   ########.fr       */
+/*   Created: 2025/04/12 14:53:13 by ehuybere          #+#    #+#             */
+/*   Updated: 2025/04/12 15:14:14 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_strncmp(const char* str1, const char* str2, size_t n)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
-	while (str[i])
+	if (n == 0)
 	{
-		i++;
+		return (0);
 	}
-	return (i);
+	while (str1[i] && str2[i] && i < n)
+	{
+		if (str1[i] == str2[i])
+		{
+			i++;
+		}
+		else
+		{
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+		}
+	}
+	return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 }
