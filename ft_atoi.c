@@ -6,11 +6,15 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 10:01:31 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/12 10:02:45 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/13 15:05:33 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_skip(char *str)
+#include "libft.h"
+//#include <stdio.h>
+//#include <stdlib.h>
+
+int	ft_skip(const char *str)
 {
 	int	i;
 
@@ -24,49 +28,65 @@ int	ft_skip(char *str)
 	return (i);
 }
 
-int	ft_sign(char *str, int *i)
+int ft_sign(const char *str, int *i)
 {
-	int	count_neg;
-
-	count_neg = 0;
-	while (str[*i] == '-' || str[*i] == '+')
+	int sign;
+	
+	sign = 1;
+	if (str[*i] == '-' || str[*i] == '+')
 	{
 		if (str[*i] == '-')
 		{
-			count_neg += 1;
+			sign = -1;
 		}
 		(*i)++;
 	}
-	return (count_neg);
+	return (sign);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
-	int	count_neg;
+	int	sign;
 	int	result;
 
 	i = 0;
-	count_neg = 0;
 	result = 0;
 	i = ft_skip(str);
-	count_neg = ft_sign(str, &i);
+	sign = ft_sign(str, &i);
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
-	if (count_neg % 2 == 1)
-	{
-		result = -result;
-	}
-	return (result);
+	return (sign * result);
 }
 
 /*
-int	main(void)
+int main(void)
 {
-	ft_atoi("  	---+--+1234ab567");
-	return (0);
+    const char *test_cases[] = {
+        "0",
+        "123",
+        "-123",
+        "+123",
+        "  -123",
+        "+-123",
+        "--123",
+        "123abc",
+        "2147483647",  // INT_MAX
+        "-2147483648", // INT_MIN
+        NULL
+    };
+    
+    for (int i = 0; test_cases[i] != NULL; i++)
+    {
+        printf("Input: \"%s\"\n", test_cases[i]);
+        printf("Standard atoi: %d\n", atoi(test_cases[i]));
+        printf("Your ft_atoi: %d\n", ft_atoi(test_cases[i]));
+        printf("\n");
+    }
+    
+    return (0);
 }
 */
