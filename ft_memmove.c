@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 12:10:52 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/12 12:33:54 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/15 12:52:48 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,12 @@ void	*ft_memmove(void *dst, const void *src, size_t size)
 	const char *temp_src;
 	char *temp_dst;
 	
+	if ((dst == NULL && src == NULL) || size == 0)
+	{
+		return (dst);
+	}
 	temp_src = (const char *)src;
 	temp_dst = (char *)dst;
-	if (dst == NULL || src == NULL)
-	{
-		return (dst);
-	}
-	if (size == 0)
-	{
-		return (dst);
-	}
 	i = 0;
 	if (temp_dst > temp_src && temp_dst < temp_src + size)
 	{

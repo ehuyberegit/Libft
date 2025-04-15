@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 13:28:07 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/12 13:45:24 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/15 14:47:07 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,24 @@
 
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t dst_size;
-	size_t src_size;
-	size_t i;
+	size_t	dst_size;
+	size_t	src_size;
+	size_t	i;
 
-	src_size = 0;
-	while (src[src_size] != '\0')
+	if (src == NULL)
 	{
-		src_size++;
+		return (size);
 	}
-	dst_size = 0;
-	while (dst[dst_size] != '\0')
+	if (size == 0)
 	{
-		dst_size++;
+		return (ft_strlen(src));
 	}
+	src_size = ft_strlen(src);
+	if (dst == NULL)
+	{
+		return (src_size);
+	}
+	dst_size = ft_strlen(dst);
 	if (dst_size >= size)
 	{
 		return (size + src_size);

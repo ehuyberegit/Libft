@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 14:53:13 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/12 15:14:14 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/15 14:00:39 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,13 @@ int	ft_strncmp(const char* str1, const char* str2, size_t n)
 	{
 		return (0);
 	}
-	while (str1[i] && str2[i] && i < n)
+	while (str1[i] && str1[i] == str2[i] && i < n - 1)
 	{
-		if (str1[i] == str2[i])
-		{
-			i++;
-		}
-		else
-		{
-			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
-		}
+		i++;
 	}
-	return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+	if (i < n)
+	{
+		return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+	}
+	return (0);
 }
