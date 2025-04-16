@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 15:57:14 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/14 16:17:28 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/16 12:53:52 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,7 @@ char	*ft_strdup(const char *str)
 	size_t	i;
 	char	*memory;
 
-	len = 0;
-	while (str[len])
-	{
-		len++;
-	}
+	len = ft_strlen(str);
 	memory = (char *)malloc(len + 1);
 	if (memory == NULL)
 	{
