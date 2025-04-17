@@ -6,7 +6,14 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:17:44 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/15 11:17:45 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/17 12:41:06 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
+{
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
+}

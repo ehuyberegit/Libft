@@ -6,7 +6,14 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:20:36 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/15 11:20:37 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:08:16 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	new -> next = *lst;
+	*lst = new;
+}
