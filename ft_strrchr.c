@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 14:45:58 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/12 14:50:24 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 14:42:22 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,21 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
 	{
 		i++;
 	}
-	if (c == '\0')
+	if ((unsigned char)c == '\0')
 	{
 		return ((char *)&str[i]);
 	}
 	i--;
 	while (i >= 0)
 	{
-		if (str[i] == c)
+		if (str[i] == (unsigned char)c)
 		{
 			return ((char *)&str[i]);
 		}
