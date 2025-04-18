@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/09 17:03:05 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/16 15:48:08 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:56:44 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_count_substring(char const *s, char c)
 	size_t	i;
 	size_t	count;
 	size_t	in_sub;
-	
+
 	i = 0;
 	count = 0;
 	in_sub = 0;
@@ -34,9 +34,9 @@ size_t	ft_count_substring(char const *s, char c)
 		}
 		i++;
 	}
-
 	return (count);
 }
+
 char	*ft_substring(char const *s, char c, size_t start)
 {
 	char	*sub;
@@ -60,10 +60,10 @@ char	*ft_substring(char const *s, char c, size_t start)
 		i++;
 	}
 	sub[i] = '\0';
-	
 	return (sub);
 }
-int    process_splits(char const *s, char c, char **result)
+
+int	process_splits(char const *s, char c, char **result)
 {
 	size_t	i;
 	size_t	j;
@@ -75,22 +75,23 @@ int    process_splits(char const *s, char c, char **result)
 	{
 		while (s[i] == c)
 			i++;
-		if (s[i] == '\0') break;
+		if (s[i] == '\0')
+			break ;
 		start = i;
 		while (s[i] && s[i] != c)
 			i++;
 		result[j] = ft_substring(s, c, start);
-		if (result[j] == NULL)
+		if (result[j++] == NULL)
 		{
 			while (j > 0)
 				free(result[--j]);
 			return (0);
 		}
-		j++;
 	}
 	result[j] = NULL;
 	return (1);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
@@ -109,7 +110,7 @@ char	**ft_split(char const *s, char c)
 	if (process_splits(s, c, result) == 0)
 	{
 		free(result);
-		return(NULL);
+		return (NULL);
 	}
 	return (result);
 }

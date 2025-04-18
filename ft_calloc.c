@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 15:31:30 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/14 15:51:42 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:39:30 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char *memory;
-	size_t total_size;
-	size_t i;
-	
+	char	*memory;
+	size_t	total_size;
+	size_t	i;
+
 	total_size = count * size;
 	memory = (char *)malloc(total_size);
 	if (memory == NULL)

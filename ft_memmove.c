@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 12:10:52 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/15 12:52:48 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:18:34 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,26 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t size)
 {
-	size_t i;
-	const char *temp_src;
-	char *temp_dst;
-	
-	if ((dst == NULL && src == NULL) || size == 0)
-	{
+	unsigned char		*d;
+	const unsigned char	*s;
+
+	if (!dst && !src)
 		return (dst);
-	}
-	temp_src = (const char *)src;
-	temp_dst = (char *)dst;
-	i = 0;
-	if (temp_dst > temp_src && temp_dst < temp_src + size)
+	if (size == 0)
+		return (dst);
+	d = (unsigned char *)dst;
+	s = (const unsigned char *)src;
+	if (d < s || d >= s + size)
 	{
-		i = size;
-		while (i > 0)
-		{
-			i--;
-			temp_dst[i] = temp_src[i];
-		}
+		while (size--)
+			*d++ = *s++;
 	}
 	else
 	{
-		i = 0;
-		while (i < size)
-		{
-			temp_dst[i] = temp_src[i];
-			i++;
-		}
+		d += size - 1;
+		s += size - 1;
+		while (size--)
+			*d-- = *s--;
 	}
-	return (temp_dst);
+	return (dst);
 }

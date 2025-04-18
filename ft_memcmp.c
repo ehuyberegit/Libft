@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 13:36:33 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/13 13:52:25 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:41:52 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i;
-	unsigned char *temp_s1;
-	unsigned char *temp_s2;
+	size_t			i;
+	unsigned char	*temp_s1;
+	unsigned char	*temp_s2;
 
 	if (n == 0)
 	{
@@ -27,7 +27,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if(temp_s1[i] == temp_s2[i])
+		if (temp_s1[i] == temp_s2[i])
 		{
 			i++;
 		}

@@ -6,13 +6,13 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:17:20 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/17 12:30:20 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:11:47 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

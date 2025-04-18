@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 15:15:12 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/13 13:31:16 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:41:24 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
-	unsigned char *temp_str;
-	size_t i;
-	
+	unsigned char	*temp_str;
+	size_t			i;
+
 	temp_str = (unsigned char *)str;
 	i = 0;
 	while (i < n)
@@ -27,6 +27,5 @@ void	*ft_memchr(const void *str, int c, size_t n)
 		}
 		i++;
 	}
-	
 	return (NULL);
 }

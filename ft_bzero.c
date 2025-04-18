@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 10:39:23 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/12 11:31:18 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:39:05 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *mem, size_t size)
 {
 	size_t	i;
-	char *temp;
+	char	*temp;
 
 	i = 0;
 	temp = (char *)mem;

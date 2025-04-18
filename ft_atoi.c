@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 10:01:31 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/13 15:05:33 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:38:40 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ int	ft_skip(const char *str)
 	return (i);
 }
 
-int ft_sign(const char *str, int *i)
+int	ft_sign(const char *str, int *i)
 {
-	int sign;
-	
+	int	sign;
+
 	sign = 1;
 	if (str[*i] == '-' || str[*i] == '+')
 	{

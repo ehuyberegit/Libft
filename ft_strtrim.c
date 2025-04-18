@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:15:26 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/18 13:45:47 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:08:13 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 	size_t	len;
-	char *	result;
+	char	*result;
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
@@ -36,5 +36,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (result == NULL)
 		return (NULL);
 	ft_strlcpy(result, s1 + start, end - start + 1);
-	return (result);	
+	return (result);
 }

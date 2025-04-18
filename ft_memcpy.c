@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 11:33:09 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/18 15:12:40 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:42:12 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t size)
 {
-	const char *temp_src;
-	char *temp_dst;
-	size_t i;
+	const char	*temp_src;
+	char		*temp_dst;
+	size_t		i;
 
 	if (size == 0)
 		return (dst);

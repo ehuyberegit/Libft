@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:20:36 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/18 10:31:01 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:04:55 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
 	{
-		return;
+		return ;
 	}
 	if (!*lst)
 	{
 		*lst = new;
-		return;
+		return ;
 	}
 	new -> next = *lst;
 	*lst = new;

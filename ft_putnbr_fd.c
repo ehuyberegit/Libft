@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:18:05 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/17 12:44:49 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:10:50 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n == -2147483648)
 	{
 		ft_putstr_fd("-2147483648", fd);
-		return;
+		return ;
 	}
 	if (n < 0)
 	{

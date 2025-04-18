@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 12:42:35 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/12 13:27:00 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:58:07 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 {
-	size_t i;
-	size_t src_size;
+	size_t	i;
+	size_t	src_size;
 
 	src_size = 0;
 	while (src[src_size] != '\0')

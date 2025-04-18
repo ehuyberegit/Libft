@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 17:21:42 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/15 10:37:18 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:57:25 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len_s1;
 	size_t	len_s2;
 	char	*total_mem;
-	
+
 	if (s1 == NULL || s2 == NULL)
 	{
 		return (NULL);
@@ -29,7 +29,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	{
 		return (NULL);
 	}
-
 	ft_memcpy(total_mem, s1, len_s1);
 	ft_memcpy(total_mem + len_s1, s2, len_s2);
 	total_mem[len_s1 + len_s2] = '\0';

@@ -6,7 +6,7 @@
 /*   By: ehuybere <ehuybere@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:21:52 by ehuybere          #+#    #+#             */
-/*   Updated: 2025/04/18 11:48:11 by ehuybere         ###   ########.fr       */
+/*   Updated: 2025/04/18 16:07:09 by ehuybere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*current;
 	t_list	*next;
+
 	if (!lst || !del)
-		return;
+		return ;
 	if (!*lst)
-		return;
+		return ;
 	current = *lst;
 	while (current)
 	{
